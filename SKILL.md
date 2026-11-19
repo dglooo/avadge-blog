@@ -5,6 +5,8 @@ description: Публикация статей и новостей в блог A
 
 # Публикация статьи или новости в блог AVADGE
 
+> **Вызов инструментов (с 20.11.2026).** MCP `avadge` показывает только `search_tools`, `describe_tool`, `call_tool`. Имя известно → `call_tool(name="blog_get_post", arguments={…})`; схема аргументов → `describe_tool(name)`; имя неизвестно → `search_tools(query)` (по-русски или префикс `blog_`). Голые имена ниже = `blog_create_post`, `blog_get_post`, `blog_update_post`, `blog_publish_post`.
+
 Статья и новость — одна сущность `BlogPost`, различаются только `category`:
 `articles` (статья) или `news` (новость). Других значений нет. Рендерятся одним
 шаблоном на `/blog/<category>/<slug>/`.
